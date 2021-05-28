@@ -6,22 +6,16 @@
 <div class="container">
     <div class="row my-3">
      <div class="col-sm-6 offset-sm-3">
-      <h3>Agent Registration</h3>
+      <h3>Customer Registration</h3>
       <hr>
    
    
       <form action="" method="post" novalidate class="shadow p-5">
    
        {% csrf_token %}
-       <div id="forms"></div>
-       {% if messages %}
-       {% for message in messages %}>
-           <p {% if message.tags %} class="alert alert-{{message.tags}} mb-5"{% endif %}>{{message}}</p>
-       {% endfor %}
-       {% endif %}
    
-       {{ r_form|crispy }}
-       {{ c_form|crispy }}
+       {{ r_form | crispy}}
+       {{ c_form | crispy}}
    
        
        <input type="submit" value="Submit" class="btn btn-primary my-2">
